@@ -1,0 +1,7 @@
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\WebApplication1.exe
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\appsettings.Development.json
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\appsettings.json
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\WebApplication1.dll
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\WebApplication1.deps.json
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\WebApplication1.runtimeconfig.json
+C:\Users\girac\Downloads\Net-webapp-main\Net-webapp-main\WebApplication1\publish\WebApplication1.pdb
