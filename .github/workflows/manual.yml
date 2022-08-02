@@ -1,0 +1,34 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-deploy:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Run the Publish
+      run: dotnet publish --configuration Release --no-restore --output ./publish      
+ 
+    - name: Deploy to IIS Server 
+      run: |
+        echo Starting...
+        lftp -c "open -u FTP-USER,${{ secrets.SERVER1_KEY }} 192.168.0.104; mirror -R -vvv /home/bash/actions-runner/_work/Net-webapp/Net-webapp/publish/ /website-IIS/ --no-perms; bye"
+        lftp -c "open -u WinFTP,${{ secrets.SERVER2_KEY }} 192.168.0.105; mirror -R -vvv /home/bash/actions-runner/_work/Net-webapp/Net-webapp/publish/ /webapp-IIS/ --no-perms; bye"
+    
