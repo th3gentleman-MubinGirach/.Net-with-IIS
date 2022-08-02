@@ -32,5 +32,5 @@ jobs:
     - name: Deploy to IIS Server 
       run: |
         echo Starting...
-        lftp -c "open -u FTP-USER,${{ secrets.SERVER1_KEY }} 192.168.0.104; mirror -R -vvv /home/bash/actions-runner/_work/..Net-with-IIS/.Net-with-IIS/publish/ /website-IIS/ --no-perms; bye"
+        lftp -c "open -u FTP-USER,${{ secrets.SERVER1_KEY }} 192.168.0.104; mirror -R -vvv /home/bash/actions-runner/_work/.Net-with-IIS/.Net-with-IIS/publish/ /website-IIS/ --no-perms; bye"
         lftp -c "open -u WinFTP,${{ secrets.SERVER2_KEY }} 192.168.0.105; mirror -R -vvv /home/bash/actions-runner/_work/.Net-with-IIS/.Net-with-IIS/publish/ /webapp-IIS/ --no-perms; bye"
