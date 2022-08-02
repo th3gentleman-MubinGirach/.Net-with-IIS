@@ -4,7 +4,7 @@
 <p> --------------------------------------------------------------------------------------------------------------------------</p>
 <br>
 
-<h2> This project is created to serve the use case of building and deploying .NET app to on-prem infrastructure </h2>
+<h2> This project is created to serve the use case of building and deploying .NET app to on-prem infrastructure using GitHub Actions </h2>
 <br>
 <p> --------------------------------------------------------------------------------------------------------------------------</p>
 <br>
